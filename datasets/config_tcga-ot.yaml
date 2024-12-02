@@ -1,0 +1,326 @@
+aggregation: slide
+cohorts:
+- TCGA
+ext_cohorts: []
+folds: 1
+label_dict:
+  AASTR: 0
+  ACC: 1
+  AOAST: 2
+  ASTR: 3
+  BLCA: 4
+  CCRCC: 5
+  CESC: 6
+  CHRCC: 7
+  COAD: 8
+  DDLS: 9
+  DSTAD: 10
+  ESCA: 11
+  ESCC: 12
+  GBM: 13
+  HCC: 14
+  HGSOC: 15
+  HNSC: 16
+  IDC: 17
+  ILC: 18
+  LMS: 19
+  LUAD: 20
+  LUSC: 21
+  MACR: 22
+  MEL: 23
+  MFH: 24
+  MFS: 25
+  NSGCT: 26
+  OAST: 27
+  ODG: 28
+  PAAD: 29
+  PHC: 30
+  PLEMESO: 31
+  PRAD: 32
+  PRCC: 33
+  READ: 34
+  SEM: 35
+  SKCM: 36
+  STAD: 37
+  THFO: 38
+  THPA: 39
+  THYM: 40
+  TSTAD: 41
+  UCS: 42
+  UEC: 43
+  UM: 44
+  USC: 45
+metric: bacc
+num_classes: 46
+num_samples: 11186
+prompts:
+  AASTR:
+  - anaplastic astrocytoma
+  - astrocytoma, anaplastic
+  - grade III astrocytoma
+  - AASTR
+  ACC:
+  - adrenocortical carcinoma
+  - adrenal cortical carcinoma
+  - adrenal cortex carcinoma
+  - ACC
+  AOAST:
+  - anaplastic oligoastrocytoma
+  - oligoastrocytoma
+  - anaplastic mixed glioma
+  - AOAST
+  ASTR:
+  - astrocytoma
+  - diffuse astrocytoma
+  - fibrillary astrocytoma
+  - anaplastic astrocytoma
+  - grade II astrocytoma
+  - grade III astrocytoma
+  - ASTR
+  BLCA:
+  - urothelial carcinoma
+  - bladder urothelial carcinoma
+  - transitional cell carcinoma
+  - bladder cancer
+  - BLCA
+  CCRCC:
+  - clear cell carcinoma
+  - renal clear cell carcinoma
+  - clear cell renal cell carcinoma
+  - clear cell RCC
+  - CCRCC
+  CESC:
+  - squamous cell carcinoma of the cervix
+  - cervical squamous cell carcinoma
+  - cervical SCC
+  - CESC
+  CHRCC:
+  - chromophobe renal cell carcinoma
+  - chromophobe RCC
+  - chromophobe carcinoma
+  - renal cell carcinoma, chromophobe type
+  - CHRCC
+  COAD:
+  - colon adenocarcinoma
+  - adenocarcinoma of the colon
+  - colorectal adenocarcinoma
+  - COAD
+  DDLS:
+  - dedifferentiated liposarcoma
+  - dedifferentiated liposarcoma variant
+  - liposarcoma, dedifferentiated
+  - DDLS
+  DSTAD:
+  - diffuse type adenocarcinoma of the stomach
+  - diffuse stomach adenocarcinoma
+  - diffuse gastric adenocarcinoma
+  - stomach adenocarcinoma, diffuse type
+  - DSTAD
+  ESCA:
+  - esophageal adenocarcinoma
+  - adenocarcinoma of the esophagus
+  - esophageal cancer, adenocarcinoma type
+  - ESCA
+  ESCC:
+  - esophageal squamous cell carcinoma
+  - esophageal SCC
+  - squamous cell carcinoma of the esophagus
+  - SCC of the esophagus
+  - ESCC
+  GBM:
+  - glioblastoma multiforme
+  - glioblastoma
+  - GBM
+  - multiforme glioblastoma
+  - grade IV astrocytoma
+  HCC:
+  - hepatocellular carcinoma
+  - liver cancer
+  - hepatoma
+  - HCC
+  HGSOC:
+  - high-grade serous ovarian cancer
+  - high-grade serous carcinoma
+  - HGSOC
+  - serous papillary carcinoma
+  - serous ovarian carcinoma
+  HNSC:
+  - head and neck squamous cell carcinoma
+  - HNSCC
+  - head and neck SCC
+  - oropharyngeal squamous cell carcinoma
+  - laryngeal squamous cell carcinoma
+  - hypopharyngeal squamous cell carcinoma
+  - nasopharyngeal squamous cell carcinoma
+  - oral cavity squamous cell carcinoma
+  - HNSC
+  IDC:
+  - invasive ductal carcinoma
+  - breast invasive ductal carcinoma
+  - ductal carcinoma, no special type
+  - IDC
+  ILC:
+  - invasive lobular carcinoma
+  - breast invasive lobular carcinoma
+  - invasive lobular carcinoma of the breast
+  - lobular carcinoma
+  - breast ILC
+  LMS:
+  - leiomyosarcoma
+  - smooth muscle sarcoma
+  - leiomyosarcoma of the soft tissue
+  - LMS
+  LUAD:
+  - lung adenocarcinoma
+  - adenocarcinoma of the lung
+  - pulmonary adenocarcinoma
+  - peripheral lung adenocarcinoma
+  - LUAD
+  LUSC:
+  - squamous cell carcinoma
+  - lung squamous cell carcinoma
+  - squamous carcinoma of the lung
+  - LUSC
+  MACR:
+  - mucinous adenocarcinoma
+  - mucinous adenocarcinoma of the colon
+  - mucinous adenocarcinoma of the rectum
+  - mucinous colorectal adenocarcinoma
+  - MACR
+  MEL:
+  - acral melanoma
+  - melanoma
+  - acral lentiginous melanoma
+  - MEL
+  MFH:
+  - undifferentiated pleomorphic sarcoma
+  - malignant fibrous histiocytoma
+  - high-grade spindle cell sarcoma
+  - MFH
+  MFS:
+  - myxofibrosarcoma
+  - myxoid fibrosarcoma
+  - myxofibrosarcomatosis
+  - MFS
+  NSGCT:
+  - non-seminomatous germ cell tumor
+  - NSGCT
+  - germ cell tumor, non-seminomatous
+  - mixed germ cell tumor
+  - embryonal carcinoma
+  - yolk sac tumor
+  - teratoma
+  OAST:
+  - oligoastrocytoma
+  - oligoastrocytic tumor
+  - oligodendroglial-astrocytic tumor
+  - OAST
+  ODG:
+  - oligodendroglioma
+  - oligodendroglial tumor
+  - oligodendroglioma grade II
+  - oligodendroglioma grade III
+  - ODG
+  PAAD:
+  - pancreatic adenocarcinoma
+  - adenocarcinoma of the pancreas
+  - pancreas adenocarcinoma
+  - PAAD
+  PHC:
+  - pheochromocytoma
+  - chromaffin cell tumor
+  - adrenal pheochromocytoma
+  - paraganglioma
+  - PHC
+  PLEMESO:
+  - pleural mesothelioma
+  - epithelioid mesothelioma
+  - epithelioid pleural mesothelioma
+  - pleural mesothelioma, epithelioid type
+  - PLEMESO
+  PRAD:
+  - prostate adenocarcinoma
+  - adenocarcinoma of the prostate
+  - prostatic adenocarcinoma
+  - PRAD
+  PRCC:
+  - papillary renal cell carcinoma
+  - renal cell carcinoma, papillary type
+  - papillary RCC
+  - PRCC
+  READ:
+  - rectal adenocarcinoma
+  - adenocarcinoma of the rectum
+  - rectal cancer
+  - READ
+  SEM:
+  - seminoma
+  - testicular seminoma
+  - pure seminoma
+  - classic seminoma
+  - seminomatous germ cell tumor
+  - SEM
+  SKCM:
+  - cutaneous melanoma
+  - skin melanoma
+  - melanoma of the skin
+  - malignant melanoma
+  - SKCM
+  STAD:
+  - diffuse type stomach adenocarcinoma
+  - diffuse gastric adenocarcinoma
+  - diffuse-type gastric cancer
+  - gastric adenocarcinoma, diffuse type
+  - STAD
+  THFO:
+  - follicular thyroid carcinoma
+  - follicular thyroid cancer
+  - follicular carcinoma of the thyroid
+  - thyroid follicular cancer
+  - THFO
+  THPA:
+  - papillary thyroid carcinoma
+  - papillary thyroid cancer
+  - papillary thyroid neoplasm
+  - PTC
+  - thyroid papillary carcinoma
+  THYM:
+  - thymoma
+  - thymic tumor
+  - thymic carcinoma
+  - thymic epithelial neoplasm
+  - THYM
+  TSTAD:
+  - tubular stomach adenocarcinoma
+  - tubular adenocarcinoma of the stomach
+  - stomach tubular adenocarcinoma
+  - gastric tubular adenocarcinoma
+  - TSTAD
+  UCS:
+  - uterine carcinosarcoma
+  - "uterine malignant mixed M\xFCllerian tumor"
+  - "malignant mixed M\xFCllerian tumor"
+  - carcinosarcoma of the uterus
+  - UCS
+  UEC:
+  - endometrioid carcinoma
+  - uterine endometrioid carcinoma
+  - endometrial endometrioid carcinoma
+  - endometrial carcinoma, endometrioid type
+  - UEC
+  UM:
+  - uveal melanoma
+  - uvea melanoma
+  - ocular melanoma
+  - choroidal melanoma
+  - ciliary body melanoma
+  - iris melanoma
+  - UM
+  USC:
+  - uterine serous carcinoma
+  - uterine papillary serous carcinoma
+  - serous papillary carcinoma of the uterus
+  - serous carcinoma
+  - USC
+target: OncoTreeCode
+task: multiclass
