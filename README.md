@@ -2,7 +2,7 @@
 
 ## Multimodal Whole Slide Foundation Model for Pathology
 
-[Preprint](https://arxiv.org/abs/2411.19666) | [Download Model](https://huggingface.co/MahmoodLab/TITAN) | [Cite](#reference)
+[Preprint](https://arxiv.org/abs/2411.19666) | [Download Model](https://huggingface.co/MahmoodLab/TITAN) | [Blog](https://www.linkedin.com/pulse/building-vision-language-guided-multimodal-whole-slide-tong-ding-0hawe/?trackingId=j4u4BgoBSuad2GDEICorkw%3D%3D) | [Cite](#reference)
 
 
 **Abstract:** The field of computational pathology has been transformed with recent advances in foundation models that encode histopathology region-of-interests (ROIs) into versatile and transferable feature representations via self-supervised learning (SSL). However, translating these advancements to address complex clinical challenges at the patient and slide level remains constrained by limited clinical data in disease-specific cohorts, especially for rare clinical conditions. 
