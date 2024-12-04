@@ -42,7 +42,7 @@ Request access to the model weights (CONCHv1.5 and TITAN-preview for patch and s
 
 ### 2. Downloading weights + Creating model
 
-Following authentication (using huggingface_hub), both TITAN-preview (slide and language encoders) and CONCH v1.5 (patch encoder) can be automatically downloaded from huggingface model hub as follows. It includes the functionalities to extract slide embeddings from patch embeddings and and to perform zero-shot classification. More details can be found in our demo notebooks.
+Following authentication (using huggingface_hub), both TITAN-preview (slide and language encoders) and CONCH v1.5 (patch encoder) can be automatically downloaded from huggingface model hub as follows. It includes the functionalities to extract slide embeddings from patch embeddings and to perform zero-shot classification. More details can be found in our demo notebooks.
 
 ```python
 from huggingface_hub import login
