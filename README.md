@@ -58,6 +58,8 @@ conch, eval_transform = titan.return_conch()
 
 You can directly use TITAN-preview for slide-level feature extraction. TITAN builds a feature grids from CONCH v1.5 patch features using the coordinates and the distance between the patches. As patch coordinates are always saved at the slides' level 0 magnification, TITAN takes patch_size_lv0 which represents the distance between two adjacent patches at level 0 magnification. It is 1024 if slide is 40x, or 512 if slide is 20x. We have this info saved in our demo TCGA features.
 
+CLAM can be used for CONCH v1.5 patch feature extraction by setting `--model_name` to 'conch_v1_5', when running the extract_features_fp.py.
+
 Slide-level feature extraction can be done in the following way:
 
 ```python
