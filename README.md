@@ -16,6 +16,7 @@ We propose **TITAN**, a multimodal whole slide foundation model pretrained using
 TITAN also did not use large public histology slide collections such as TCGA, PAIP, CPTAC, PANDA for pretraining, which are routinely used in benchmark development in computational pathology. Therefore, we make TITAN available for the research community in building and evaluating pathology AI models with minimal risk of data contamination on public benchmarks or private histopathology slide collections.
 
 ## Updates
+- **12/04/2024**: CONCHv1.5 feature extraction is integrated into [CLAM](https://github.com/mahmoodlab/CLAM).
 - **12/02/2024**: TITAN preprint and model weights (TITAN-preview and CONCHv1.5) are now live. TCGA-OT splits are available in `./datasets`.
 
 ## Installation
@@ -42,7 +43,7 @@ Request access to the model weights (CONCHv1.5 and TITAN-preview for patch and s
 
 ### 2. Downloading weights + Creating model
 
-Following authentication (using huggingface_hub), both TITAN-preview (slide and language encoders) and CONCH v1.5 (patch encoder) can be automatically downloaded from huggingface model hub as follows. It includes the functionalities to extract slide embeddings from patch embeddings and and to perform zero-shot classification. More details can be found in our demo notebooks.
+Following authentication (using huggingface_hub), both TITAN-preview (slide and language encoders) and CONCH v1.5 (patch encoder) can be automatically downloaded from huggingface model hub as follows. It includes the functionalities to extract slide embeddings from patch embeddings and to perform zero-shot classification. More details can be found in our demo notebooks.
 
 ```python
 from huggingface_hub import login
@@ -58,9 +59,9 @@ conch, eval_transform = titan.return_conch()
 
 You can directly use TITAN-preview for slide-level feature extraction. TITAN builds a feature grids from CONCH v1.5 patch features using the coordinates and the distance between the patches. As patch coordinates are always saved at the slides' level 0 magnification, TITAN takes patch_size_lv0 which represents the distance between two adjacent patches at level 0 magnification. It is 1024 if slide is 40x, or 512 if slide is 20x. We have this info saved in our demo TCGA features.
 
-CLAM can be used for CONCH v1.5 patch feature extraction by setting `--model_name` to 'conch_v1_5', when running the extract_features_fp.py.
+**Patch feature extraction** [CLAM](https://github.com/mahmoodlab/CLAM) can also be used for patch feature extraction with CONCHv1.5. When using `extract_features_fp.py`, set `--model_name` to 'conch_v1_5'.
 
-Slide-level feature extraction can be done in the following way:
+**Slide feature extraction** Slide-level feature extraction can be done in the following way:
 
 ```python
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
