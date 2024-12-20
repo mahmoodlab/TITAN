@@ -85,6 +85,8 @@ with torch.autocast('cuda', torch.float16), torch.inference_mode():
     slide_embedding = model.encode_slide_from_patch_features(features, coords, patch_size_lv0)
 ```
 
+**Note**: while the original TITAN model arechitecture also includes a multimodal decoder trained with the captioning loss of CoCa, as additional precaution to ensure that no proprietary data or Protected Health Information (PHI) is leaked untentionally, we have _removed_ the weights for the decoder from the publicly released TITAN weights. The weights for the text encoder and the vision encoder are intact and therefore the results on all key tasks presented in the paper are not affected. The ability of TITAN to serve as a general purpose encoder for both histopathology images and pathology-related text also remains unaffected.
+
 ## Demo of specific use cases
 
 We provide a set of demo notebooks to showcase the capabilities of TITAN. The notebooks include:
