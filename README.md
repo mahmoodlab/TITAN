@@ -16,6 +16,7 @@ We propose **TITAN**, a multimodal whole slide foundation model pretrained using
 TITAN also did not use large public histology slide collections such as TCGA, PAIP, CPTAC, PANDA for pretraining, which are routinely used in benchmark development in computational pathology. Therefore, we make TITAN available for the research community in building and evaluating pathology AI models with minimal risk of data contamination on public benchmarks or private histopathology slide collections.
 
 ## Updates
+- **02/14/2025**: TITAN slide feature extraction (along with CONCHv1.5 feature extraction) is integrated into [TRIDENT](https://github.com/mahmoodlab/Trident).
 - **12/04/2024**: CONCHv1.5 feature extraction is integrated into [CLAM](https://github.com/mahmoodlab/CLAM).
 - **12/02/2024**: TITAN preprint and model weights (TITAN-preview and CONCHv1.5) are now live. TCGA-OT splits are available in `./datasets`.
 
@@ -59,9 +60,17 @@ conch, eval_transform = titan.return_conch()
 
 You can directly use TITAN-preview for slide-level feature extraction. TITAN builds a feature grids from CONCH v1.5 patch features using the coordinates and the distance between the patches. As patch coordinates are always saved at the slides' level 0 magnification, TITAN takes patch_size_lv0 which represents the distance between two adjacent patches at level 0 magnification. It is 1024 if slide is 40x, or 512 if slide is 20x. We have this info saved in our demo TCGA features.
 
-**Patch feature extraction** [CLAM](https://github.com/mahmoodlab/CLAM) can also be used for patch feature extraction with CONCHv1.5. When using `extract_features_fp.py`, set `--model_name` to 'conch_v1_5'.
+We provide two options for TITAN slide feature extraction.
 
-**Slide feature extraction** Slide-level feature extraction can be done in the following way:
+***OPTION 1***
+
+[TRIDENT](https://github.com/mahmoodlab/Trident) can be used for both CONCHv1.5 feature extraction and TITAN slide feature extraction.
+
+***OPTION 2***
+
+ **Patch feature extraction** [CLAM](https://github.com/mahmoodlab/CLAM) can also be used for patch feature extraction with CONCHv1.5. When using `extract_features_fp.py`, set `--model_name` to 'conch_v1_5'.
+
+ **Slide feature extraction** Slide-level feature extraction can be done in the following way:
 
 ```python
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
